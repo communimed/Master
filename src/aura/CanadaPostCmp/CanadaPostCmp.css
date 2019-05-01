@@ -1,0 +1,18 @@
+.THIS.cCanadaPostCmp ul.resultsPC {
+    padding: 5px 10px !important;
+    max-height: 280px;
+    overflow-y: scroll;
+    max-width: 50%;
+}
+
+.THIS ul.resultsPC li {
+    padding: 2px 0px;
+}
+
+.THIS ul.resultsPC li a{
+    color: rgb(62, 62, 60);
+}
+
+.THIS ul.resultsPC li a span.streetPC{
+    font-weight: bold;
+}

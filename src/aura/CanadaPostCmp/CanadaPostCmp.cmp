@@ -1,0 +1,97 @@
+<aura:component implements="flexipage:availableforAllPageTypes,force:hasRecordId" access="global" controller="CanadaPostController">
+
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="searchAddress" type="string" default=""/>
+    <aura:attribute name="results" type="List" default="[]"/>
+    <aura:attribute name="updatedAccount" type="Account"/>
+    <aura:attribute name="mapMarkers" type="Object"/>
+ 
+    <!-- Design Config -->
+    <aura:attribute name="apiKey" type="string"/>
+    <aura:attribute name="addressType" type="string"/>
+    <aura:attribute name="addressPrefix" type="string"/>
+    
+
+    <lightning:layout horizontalAlign="space" class="slds-m-bottom_xx-large" multipleRows="true">
+        <lightning:layoutItem size="6" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12" >
+            <lightning:input label="Search Address on Post Canada" 
+            type="search"
+            name="searchAddress"
+            aura:id="searchAddress"
+            value="{!v.searchAddress}"
+            onchange="{!c.getItems}"
+            onblur="{!c.hideResults}" />
+
+
+            <aura:if isTrue="{!v.results.length > 0}">
+                <ul class="uiInput--lookup lookup__menu forceSearchInputLookupDesktop resultsPC">
+                    <aura:iteration items="{!v.results}" var="result"> 
+                        <li class="slds-listbox__item">
+                            <a onclick="{!c.setAddress}" data-placeid="{!result.Id}" data-text="{!result.Text}" data-description="{!result.Description}" data-next="{!result.Next}">
+                                <span class="streetPC">{!result.Text}</span>, {!result.Description}
+                                <aura:if isTrue="{!result.Next == 'Find'}">
+                                    <lightning:icon iconName="utility:jump_to_bottom" alternativeText="Next" size="xx-small"/>
+                                </aura:if>
+                            </a>
+                        </li>
+                    </aura:iteration>
+                </ul>
+            </aura:if>
+
+            <aura:if isTrue="{!v.addressPrefix == 'Shipping'}">
+                <div class="slds-m-top_medium">
+                    <lightning:inputAddress
+                        addressLabel="{!v.addressType}"
+                        streetLabel="Street"
+                        cityLabel="City"
+                        countryLabel="Country"
+                        provinceLabel="Province"
+                        postalCodeLabel="Postal Code"
+                        street="{!v.updatedAccount.ShippingStreet}"
+                        city="{!v.updatedAccount.ShippingCity}"
+                        country="{!v.updatedAccount.ShippingCountry}"
+                        province="{!v.updatedAccount.ShippingState}"
+                        postalCode="{!v.updatedAccount.ShippingPostalCode}"
+                        required="false"
+                    />
+                
+                </div>
+            </aura:if>
+
+            <aura:if isTrue="{!v.addressPrefix == 'Billing'}">
+                <div class="slds-m-top_medium">
+                    <lightning:inputAddress
+                        addressLabel="{!v.addressType}"
+                        streetLabel="Street"
+                        cityLabel="City"
+                        countryLabel="Country"
+                        provinceLabel="Province"
+                        postalCodeLabel="Postal Code"
+                        street="{!v.updatedAccount.BillingStreet}"
+                        city="{!v.updatedAccount.BillingCity}"
+                        country="{!v.updatedAccount.BillingCountry}"
+                        province="{!v.updatedAccount.BillingState}"
+                        postalCode="{!v.updatedAccount.BillingPostalCode}"
+                        required="false"
+                    />
+                
+                </div>
+            </aura:if>
+            <div class="slds-m-top_medium">
+                <lightning:buttonGroup>
+                    <lightning:button variant="brand" label="Save" onclick="{!c.updateAddressCmp }" />    
+                    <lightning:button label="Refresh" onclick="{!c.doInit }" />
+                </lightning:buttonGroup>
+            </div>
+        
+        </lightning:layoutItem>
+
+        <lightning:layoutItem  size="6" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12"  class="slds-p-left_large" padding="around-large">
+            <!-- the map component -->
+            <div aura:id="mapContainer"></div>
+        </lightning:layoutItem>
+    </lightning:layout>
+
+
+</aura:component>

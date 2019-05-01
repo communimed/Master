@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Distribution Job</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Distribution Jobs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Count Comment --></label>
+        <name>CountComment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Status --></label>
+        <name>CountStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- DateModified --></label>
+        <name>DateModified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deliver Comment --></label>
+        <name>DeliverComment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deliver Status --></label>
+        <name>DeliverStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution --></label>
+        <name>Distribution__c</name>
+        <relationshipLabel><!-- Distribution Jobs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ImageURL --></label>
+        <name>ImageURL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Install Comment --></label>
+        <name>InstallComment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Install Status --></label>
+        <name>InstallStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Installer ID --></label>
+        <name>InstallerID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Photos Comments --></label>
+        <name>PhotosComments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Photos Status --></label>
+        <name>PhotosStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Room --></label>
+        <name>Room__c</name>
+        <relationshipLabel><!-- Distribution Jobs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Done</masterLabel>
+            <translation><!-- Done --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Problem</masterLabel>
+            <translation><!-- Problem --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

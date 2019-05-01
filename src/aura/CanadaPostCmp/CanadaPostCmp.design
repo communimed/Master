@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="addressType" label="Address Type" datasource="Billing Address,Shipping Address" required="true" />
+    <design:attribute name="apiKey" label="API Key" description="Please provide the API Key provided by Post Canada" placeholder="xxxx-xxxx-xxxx-xxxx" required="true" />
+</design:component>

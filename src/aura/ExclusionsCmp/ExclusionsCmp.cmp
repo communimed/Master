@@ -1,0 +1,94 @@
+<aura:component implements="flexipage:availableforAllPageTypes,force:hasRecordId" access="global" controller="ExclusionsController">
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="exclusionForm" type="List" default="ExcludedItemType__c,ExcludedPatientType__c,ExcludedProductType__c,ExcludedTopic__c" />
+    <!-- Product grid attribute -->
+    <aura:attribute name="productColumns" type="List" />
+    <aura:attribute name="productData" type="Object" />
+    <aura:attribute name="productSelectedRows" type="List" />
+    <!-- Sponsor grid attribute -->
+    <aura:attribute name="sponsorColumns" type="List" />
+    <aura:attribute name="sponsorData" type="Object" />
+    <aura:attribute name="sponsorSelectedRows" type="List" />
+    <!-- Design Config -->
+    <aura:attribute name="objectType" type="string"/>
+
+    
+    
+        <lightning:tabset variant="scoped" class="slds-m-top_small">
+            
+            <lightning:tab label="Generals">
+                
+                <lightning:card class="slds-m-bottom_large">
+                    <aura:set attribute="title">
+                        <lightning:icon class="slds-m-right_xx-small" iconName="action:remove_relationship" size="x-small"/>
+                        Generals exclusions - Topics and Types
+                    </aura:set>
+                </lightning:card>
+
+                <lightning:recordForm
+                    recordId="{!v.recordId}"
+                    objectApiName="{!v.objectType}"
+                    fields="{!v.exclusionForm}"
+                    columns="2"
+                    onsubmit="{!c.updateExclusionForm}"
+                    mode="view" />
+
+            </lightning:tab>
+            
+            <lightning:tab label="Products" onactive="{!c.getExlusions}">
+             
+                <lightning:card class="slds-m-bottom_large">
+                    <aura:set attribute="title">
+                        <lightning:icon class="slds-m-right_xx-small" iconName="action:remove_relationship" size="x-small"/>
+                        Products exclusions
+                    </aura:set>
+                </lightning:card>
+                
+                <lightning:treeGrid
+                    columns="{!v.productColumns}"
+                    data="{!v.productData}"
+                    keyField="Id"
+                    selectedRows="{!v.productSelectedRows}"
+                    onrowselection="{!c.updateSelection }"
+                    aura:id="productListId"
+                />
+
+                <div class="slds-m-top_large slds-align_absolute-center">
+                    <lightning:buttonGroup>
+                        <lightning:button class="slds-m-right_xx-small" variant="brand" label="Save" onclick="{!c.saveSelection }" />    
+                    </lightning:buttonGroup>
+                </div>
+                        
+            </lightning:tab>
+
+            <lightning:tab label="Sponsors" onactive="{!c.getExlusions}">
+                
+                <lightning:card class="slds-m-bottom_large">
+                    <aura:set attribute="title">
+                        <lightning:icon iconName="action:remove_relationship" size="x-small"/>
+                        Sponsors exclusions
+                    </aura:set>
+                </lightning:card>
+              
+                <lightning:treeGrid
+                    columns="{!v.sponsorColumns }"
+                    data="{!v.sponsorData }"
+                    keyField="Id"
+                    selectedRows="{!v.sponsorSelectedRows}"
+                    onrowselection="{!c.updateSelection}"
+                    ontoggle="{!c.getExlusions}"
+                    aura:id="sponsorListId"
+                />
+               
+                <div class="slds-m-top_large slds-align_absolute-center">
+                    <lightning:buttonGroup>
+                        <lightning:button variant="brand" label="Save" onclick="{!c.saveSelection }" />    
+                    </lightning:buttonGroup>
+                </div>
+                    
+            </lightning:tab>
+        </lightning:tabset>
+
+</aura:component>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TODELETEScenario Item Distribution Set</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Scenario Item Distribution Sets</value>
+    </caseValues>
+    <fields>
+        <help><!-- Please enter the 3 first letters of the Postal Code --></help>
+        <label><!-- Postal Code (3 first characters) --></label>
+        <name>PostalCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Province --></label>
+        <name>Province__c</name>
+    </fields>
+    <layouts>
+        <layout>Item Distribution Set Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

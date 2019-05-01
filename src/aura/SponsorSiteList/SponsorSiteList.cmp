@@ -1,0 +1,100 @@
+<aura:component implements="flexipage:availableforAllPageTypes,force:hasRecordId" access="global" controller="SponsorSiteListController">
+
+<!-- Library -->
+<lightning:overlayLibrary aura:id="overlayLib"/>
+<lightning:notificationsLibrary aura:id="notifLib"/>
+
+<!-- Event Handler -->
+<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+<aura:handler event="c:SponsorSiteListFilter" action="{!c.handleFilter}" />
+
+<!-- Grid attribute -->
+<aura:attribute name="data" type="Object" />
+<aura:attribute name="columns" type="List" />
+<aura:attribute name="recordId" type="String" />
+
+<!-- Pagination attribute -->
+<aura:attribute name="pageNumber" type="Integer" default="1"/>
+<aura:attribute name="pageSize" type="Integer" default="25"/>
+<aura:attribute name="isLastPage" type="Boolean" default="false"/>
+<aura:attribute name="resultSize" type="Integer" default="0"/>
+<aura:attribute name="hasPageChanged" type="Boolean" default="false" />
+<aura:attribute name="hasToggleClosed" type="Boolean" default="false" />
+
+<!-- Selection & Filtera -->
+<aura:attribute name="selection" type="List" />
+<aura:attribute name="selectionCopy" type="List" />
+
+<aura:attribute name="filterActive" type="Boolean" default="false" />
+<aura:attribute name="filterStats" type="Object" />
+    
+    
+    <lightning:layout multipleRows="true" horizontalAlign="center">
+        <lightning:layoutItem padding="horizontal-small" size="12">
+            <lightning:card >
+                 <!-- Title -->
+                <aura:set attribute="title">
+                    <lightning:icon iconName="action:join_group" size="x-small"/>
+                        Preferred Sites List
+                </aura:set>
+                  <!-- Buttons action -->
+                <aura:set attribute="actions">
+                    <lightning:button variant="brand" iconName="utility:save" label="Save" onclick="{!c.saveSelection }" />
+                    <aura:if isTrue="{!v.filterActive}">
+                        <lightning:button label="Clear filter" iconName="utility:delete" variant="destructive" onclick="{!c.handleClearFilter}" />
+                    <aura:set attribute="else">
+                        <lightning:button name="modalFilter" iconName="utility:filter" label="Filter by Postal Code" onclick="{!c.handleShowModal}"/>
+                    </aura:set>
+                    </aura:if>
+                    <lightning:button name="exportExcel" iconName="utility:table" label="Export Excel" onclick="{!c.exportExcel}"/>
+                </aura:set>
+            </lightning:card>
+        </lightning:layoutItem>
+
+      
+ 
+        <!-- Filter stats if Filter Active -->
+        <aura:if isTrue="{!v.filterActive}">
+            <lightning:layoutItem padding="around-small" class="slds-text-align_right" size="12">   
+                <div>
+                    <strong>{!v.filterStats.numListFiltred}</strong> {!(v.filterStats.numListFiltred > 1) ? ' records' : ' record'} found on 
+                    <strong>{!v.filterStats.numReceived}</strong> postal {!(v.filterStats.numReceived > 1) ? ' codes' : ' code'} received
+                </div>
+                <aura:if isTrue="{!greaterthan(v.filterStats.numNonValid,1)}">
+                    <div>
+                        <strong>{!v.filterStats.numNonValid} non valid postal {!(v.filterStats.numReceived > 1) ? ' codes' : ' code'}</strong> 
+                        | <a href="#" onclick="{!c.handleFilterInvalidModal}">Click here</a> to see the list
+                    </div>
+                </aura:if>
+            </lightning:layoutItem>
+        </aura:if>
+
+        <!-- Treegrid -->
+        <lightning:layoutItem padding="around-small" size="12">
+            <lightning:treeGrid
+                aura:id="siteListGridTree"
+                columns="{!v.columns}"
+                data="{!v.data }"
+                keyField="Id"
+                resizeColumnDisabled="false"
+                selectedRows="{!v.selection}"
+                onrowselection="{!c.onRowSelection}"
+                ontoggle="{!c.reloadToggle}"
+            
+            />
+        </lightning:layoutItem>
+
+        <!-- Pagination -->
+        <aura:if isTrue="{! !v.filterActive}">
+            <lightning:layoutItem padding="around-small" flexibility="auto">
+                <lightning:button label="Prev" iconName="utility:chevronleft" iconPosition="left" onclick="{!c.onPageChanged}" disabled="{! v.pageNumber == 1}"/>
+                    <span class="slds-p-horizontal_small">
+                        Page {!v.pageNumber} | Showing records from {! ((v.pageNumber-1)*v.pageSize)+' to '+((v.pageNumber-1)*v.pageSize+v.resultSize)}
+                    </span>
+                    <lightning:button label="Next" iconName="utility:chevronright" iconPosition="right" disabled="{!v.isLastPage}" onclick="{!c.onPageChanged}"/>
+            </lightning:layoutItem>
+        </aura:if>
+
+    </lightning:layout>
+
+</aura:component>

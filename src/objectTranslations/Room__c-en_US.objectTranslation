@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Room</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Rooms</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Site --></label>
+        <lookupFilter>
+            <errorMessage><!-- The selected account must be a Site --></errorMessage>
+        </lookupFilter>
+        <name>AccountSite__c</name>
+        <relationshipLabel><!-- Rooms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Installer Notes --></label>
+        <name>InstallerNote__c</name>
+    </fields>
+    <fields>
+        <label><!-- Territory --></label>
+        <name>ListReferenceTerritory__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Type --></label>
+        <name>ProgramType__c</name>
+        <picklistValues>
+            <masterLabel>DY</masterLabel>
+            <translation><!-- DY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PY</masterLabel>
+            <translation><!-- PY --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Room Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

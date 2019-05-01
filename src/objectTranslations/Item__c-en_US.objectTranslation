@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Items</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Board Mandatory --></label>
+        <name>BoardMandatory__c</name>
+    </fields>
+    <fields>
+        <help><!-- Contact Type for to match with this Item --></help>
+        <label><!-- Contact Type --></label>
+        <name>ContactType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select if you want this item to be distributed by Contact of to be given to the entire Room --></help>
+        <label><!-- Distribution Option --></label>
+        <name>DistributionOption__c</name>
+        <picklistValues>
+            <masterLabel>Per Contacts</masterLabel>
+            <translation><!-- Per Contacts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Room</masterLabel>
+            <translation><!-- Room --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Item Type --></label>
+        <name>ItemType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language Available --></label>
+        <name>LanguageAvailable__c</name>
+        <picklistValues>
+            <masterLabel>Bilingual</masterLabel>
+            <translation><!-- Bilingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English</masterLabel>
+            <translation><!-- English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French</masterLabel>
+            <translation><!-- French --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Next to --></label>
+        <lookupFilter>
+            <errorMessage><!-- Only a poster&apos;s item can be selected --></errorMessage>
+        </lookupFilter>
+        <name>NextTo__c</name>
+        <relationshipLabel><!-- Next to Med Action --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Patient Type --></label>
+        <name>PatientType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Define if this item is personalized to contacts when distributed --></help>
+        <label><!-- Personalized --></label>
+        <name>Personalized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Type --></label>
+        <name>ProgramType__c</name>
+        <picklistValues>
+            <masterLabel>DY</masterLabel>
+            <translation><!-- DY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PY</masterLabel>
+            <translation><!-- PY --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RelatedToItem --></label>
+        <name>RelatedToItem__c</name>
+        <relationshipLabel><!-- Items (Related To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Size --></label>
+        <name>Size__c</name>
+    </fields>
+    <fields>
+        <help><!-- Match with the Speciality of the Site Related Contact --></help>
+        <label><!-- Speciality --></label>
+        <name>Speciality__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sponsor Product --></label>
+        <name>SponsorProduct__c</name>
+        <relationshipLabel><!-- Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Board --></label>
+        <lookupFilter>
+            <errorMessage><!-- Only Board can be attached to an Poster --></errorMessage>
+        </lookupFilter>
+        <name>SubItemBoard__c</name>
+        <relationshipLabel><!-- Items - Poster --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Base Item Thickness --></help>
+        <label><!-- Thickness --></label>
+        <name>Thickness__c</name>
+    </fields>
+    <fields>
+        <label><!-- Topic --></label>
+        <name>Topic__c</name>
+    </fields>
+    <layouts>
+        <layout>Item NonDisplay Material Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Distribution info --></label>
+            <section>Distribution info</section>
+        </sections>
+        <sections>
+            <label><!-- Item Characteristics --></label>
+            <section>Item Characteristics</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Item Poster Layout</layout>
+        <sections>
+            <label><!-- Characteristics --></label>
+            <section>Characteristics</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Item medAction Layout</layout>
+        <sections>
+            <label><!-- Characteristics --></label>
+            <section>Characteristics</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Med Action --></label>
+        <name>MedAction</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Non Display Material --></label>
+        <name>NonDisplayMaterial</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Poster --></label>
+        <name>Poster</name>
+    </recordTypes>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

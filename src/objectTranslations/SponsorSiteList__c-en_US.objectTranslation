@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sponsor Site List</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sponsors Site Lists</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sponsor Product --></label>
+        <name>SponsorProduct__c</name>
+        <relationshipLabel><!-- Sponsor Site Lists --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Sponsor Site List Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

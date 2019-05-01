@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Rack Layer</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Rack Layers</value>
+    </caseValues>
+    <fields>
+        <label><!-- Display --></label>
+        <lookupFilter>
+            <errorMessage><!-- You have to select a Rack Display --></errorMessage>
+        </lookupFilter>
+        <name>Display__c</name>
+        <relationshipLabel><!-- Rack Layers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Position --></label>
+        <name>Position__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Rack Layer Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

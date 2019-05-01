@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Scenario Result</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Scenario Results</value>
+    </caseValues>
+    <fields>
+        <label><!-- AccountID --></label>
+        <name>AccountID__c</name>
+    </fields>
+    <fields>
+        <label><!-- AccountName --></label>
+        <name>AccountName__c</name>
+    </fields>
+    <fields>
+        <label><!-- DisplayID --></label>
+        <name>DisplayID__c</name>
+    </fields>
+    <fields>
+        <label><!-- DisplayType --></label>
+        <name>DisplayType__c</name>
+    </fields>
+    <fields>
+        <label><!-- DistributionJobID --></label>
+        <name>DistributionJobID__c</name>
+    </fields>
+    <fields>
+        <label><!-- InPlace --></label>
+        <name>InPlace__c</name>
+    </fields>
+    <fields>
+        <label><!-- Installer Deliver Status --></label>
+        <name>InstallerDeliverStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Installer Scale --></label>
+        <name>InstallerScale__c</name>
+        <picklistValues>
+            <masterLabel>1 inch</masterLabel>
+            <translation><!-- 1 inch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 inchs</masterLabel>
+            <translation><!-- 2 inchs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 inchs</masterLabel>
+            <translation><!-- 3 inchs --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ItemID --></label>
+        <name>ItemID__c</name>
+    </fields>
+    <fields>
+        <label><!-- ItemName --></label>
+        <name>ItemName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Pad Brochure ID --></label>
+        <name>ItemPadBrochureID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Pad Brochure Name --></label>
+        <name>ItemPadBrochureName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Personalized --></label>
+        <name>ItemPersonalized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Picture ID --></label>
+        <name>ItemPictureID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Quantity Extra --></label>
+        <name>ItemQuantityExtra__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Quantity Requested --></label>
+        <name>ItemQuantityRequested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Recipient --></label>
+        <name>ItemRecipient__c</name>
+        <picklistValues>
+            <masterLabel>Per physician in clinic</masterLabel>
+            <translation><!-- Per physician in clinic --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ItemType --></label>
+        <name>ItemType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language --></label>
+        <name>Language__c</name>
+    </fields>
+    <fields>
+        <label><!-- ParentAccountID --></label>
+        <name>ParentAccountID__c</name>
+    </fields>
+    <fields>
+        <label><!-- ParentAccoutName --></label>
+        <name>ParentAccoutName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Position --></label>
+        <name>Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rack Position --></label>
+        <name>RackPosition__c</name>
+    </fields>
+    <fields>
+        <label><!-- RoomID --></label>
+        <name>RoomID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Room Name --></label>
+        <name>RoomName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scenario --></label>
+        <name>Scenario__c</name>
+        <relationshipLabel><!-- Scenario Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SubItem Board ID --></label>
+        <name>SubItemBoardID__c</name>
+    </fields>
+    <fields>
+        <label><!-- SubItem Board Name --></label>
+        <name>SubItemBoardName__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Display --></label>
+        <name>Display</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- NDM --></label>
+        <name>NDM</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

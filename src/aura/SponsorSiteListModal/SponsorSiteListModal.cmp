@@ -1,0 +1,24 @@
+<aura:component controller="SponsorSiteListController">
+    
+    <aura:attribute name="postalCodeList" type="String" />
+
+
+    <aura:registerEvent name="EventFilter" type="c:SponsorSiteListFilter" />
+
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    
+    <h2 class="header">Filter by postal codes</h2>
+
+    <lightning:textarea 
+        name="inputPostalCode" 
+        label="Please copy-paste your postal code list"
+        value="{!v.postalCodeList}" />
+
+    <div class="slds-m-top_large slds-align_absolute-center">
+    
+        <lightning:button variant="Neutral" label="Cancel" onclick="{!c.handleCancel }"/> 
+        <lightning:button variant="brand" label="Filter" onclick="{!c.handleFilter}"/>
+        
+    </div>
+
+</aura:component>

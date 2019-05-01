@@ -1,0 +1,3 @@
+<design:component label="Exclusions manager">
+    <design:attribute name="objectType" label="Object Type" datasource="Contact,Account" required="true" />
+</design:component>

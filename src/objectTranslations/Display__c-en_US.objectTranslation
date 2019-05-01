@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Display</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Displays</value>
+    </caseValues>
+    <fields>
+        <label><!-- Accepts Board --></label>
+        <name>Board__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language --></label>
+        <name>Language__c</name>
+    </fields>
+    <fields>
+        <label><!-- Position --></label>
+        <name>Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Room --></label>
+        <name>Room__c</name>
+        <relationshipLabel><!-- Displays --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Size --></label>
+        <name>Size__c</name>
+    </fields>
+    <layouts>
+        <layout>Display Frame Empty Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Display Frame Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Display Rack Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Empty Space --></label>
+        <name>EmptySpace</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Frame --></label>
+        <name>Frame</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Rack (MA) --></label>
+        <name>Rack</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

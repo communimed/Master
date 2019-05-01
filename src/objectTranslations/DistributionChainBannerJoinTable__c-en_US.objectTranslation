@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>DELETDistribution ChainBanner Join Table</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Distribution ChainBanners Join Table</value>
+    </caseValues>
+    <fields>
+        <label><!-- AccountID --></label>
+        <name>AccountID__c</name>
+    </fields>
+    <fields>
+        <label><!-- DistributionSetID --></label>
+        <name>DistributionSetID__c</name>
+    </fields>
+    <fields>
+        <label><!-- ScenarioID --></label>
+        <name>ScenarioID__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

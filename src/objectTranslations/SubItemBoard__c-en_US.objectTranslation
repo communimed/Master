@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SubItem Board</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SubItem Boards</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item (Non Display Material) --></label>
+        <name>ItemNDM__c</name>
+        <relationshipLabel><!-- SubItem Boards --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Program Type --></label>
+        <name>ProgramType__c</name>
+        <picklistValues>
+            <masterLabel>DY</masterLabel>
+            <translation><!-- DY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PY</masterLabel>
+            <translation><!-- PY --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Brochure</masterLabel>
+            <translation><!-- Brochure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pad</masterLabel>
+            <translation><!-- Pad --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>SubItem Board Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Board --></label>
+        <name>Board</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pad --></label>
+        <name>Pad</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
